@@ -1,13 +1,15 @@
-# Sample Hardhat Project
+npm i
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+create .env file
+init next variables
+PROVIDER = ""
+PRIVATE_KEY = ""
 
-Try running some of the following tasks:
+PROVIDER2 = ""
+PRIVATE_KEY2 = ""
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
-```
+npx hardhat run scripts/deploy.ts --network matic
+npx hardhat run scripts/deploy2.ts --network goerli  
+
+npx hardhat run scripts/listener.ts
+npx hardhat run scripts/transfer.ts

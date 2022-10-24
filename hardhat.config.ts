@@ -22,9 +22,9 @@ const config: HardhatUserConfig = {
       accounts: [process.env.PRIVATE_KEY!],
     },
   },
-  etherscan: {
-    apiKey: process.env.POLYGON_API_KEY,
-  },
+  // etherscan: {
+  //   apiKey: process.env.POLYGON_API_KEY,
+  // },
 }; 
 
 export default config;

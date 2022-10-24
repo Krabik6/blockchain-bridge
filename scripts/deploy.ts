@@ -8,19 +8,13 @@ async function main() {
   
   console.log(`token deployed to:`, token.address);
 
-  const WrappedToken = await ethers.getContractFactory("WrappedToken");
-  const wrappedToken = await WrappedToken.deploy();
 
-  await wrappedToken.deployed();
-
-  console.log(`wrapped token deployed to:`, wrappedToken.address);
 
   const fs = require('fs');
 
   try {
     const addObj = {
       tokenAddress: token.address,
-      wrappedTokenAddress: wrappedToken.address,
     };
     await fs.promises.writeFile('scripts/ext/file.json', JSON.stringify(addObj));
   } catch (err) {
