@@ -20,6 +20,15 @@ async function main() {
   } catch (err) {
     console.log(err);
   }
+
+  try {
+    const addObj = {
+      tokenAddress: token.address,
+    };
+    await fs.promises.writeFile('./frontend/file.json', JSON.stringify(addObj));
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 main().catch((error) => {

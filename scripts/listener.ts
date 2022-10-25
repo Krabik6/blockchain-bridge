@@ -11,7 +11,7 @@ async function main() {
   const TokenContract = new ethers.Contract(
     TokenAddr,
     TokenAbi.abi,
-    signer
+    provider
   );
 
   const provider2 = ethers.getDefaultProvider(process.env.PROVIDER2);
